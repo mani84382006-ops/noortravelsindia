@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor Travels & Manpower Service</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f5f7fa;
+}
+
+/* NAVBAR */
+nav{
+  background:#0a2540;
+  color:white;
+  padding:15px 50px;
+  display:flex;
+  justify-content:space-between;
+}
+
+nav h1{
+  font-size:20px;
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO BACKGROUND IMAGE */
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('BackGround.jpg');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:100px 50px;
+  text-align:center;
+}
+
+/* APPLY SECTION BACKGROUND */
+.apply-bg{
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('Select.jpg');
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+.hero p{
+  margin:15px 0;
+}
+
+.btn{
+  background:#ff7a00;
+  padding:10px 20px;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* SECTION */
+.section{
+  padding:50px;
+  text-align:center;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.contact{
+  background:#0a2540;
+  color:white;
+  padding:50px;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:white;
+  text-align:center;
+  padding:10px;
+}
+
+/* SELECT BOX */
+select{
+  padding:10px;
+  width:250px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h1>NOOR TRAVELS</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#apply">Apply Visa</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Noor Travels & Manpower Service</h1>
+  <p>Trusted Travel & Visa Service Provider</p>
+  <button class="btn" onclick="contact()">Contact Now</button>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Us</h2>
+  <p>
+    Saudi Arabia, Singapore & Europe visa services, manpower support,
+    flight booking, passport services and more. Trusted & professional service.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card"><h3>Visa Services</h3><p>Saudi, Kuwait, Qatar, Europe</p></div>
+    <div class="card"><h3>Flight Booking</h3><p>International & Domestic</p></div>
+    <div class="card"><h3>Passport</h3><p>New & Renewal</p></div>
+    <div class="card"><h3>Manpower</h3><p>Work permits</p></div>
+    <div class="card"><h3>Immigration</h3><p>Clearance & stamping</p></div>
+    <div class="card"><h3>Tours</h3><p>Hotels & travel</p></div>
+  </div>
+</section>
+
+<!-- APPLY VISA WITH BACKGROUND -->
+<section class="section apply-bg" id="apply">
+  <h2>Apply Visa by Country</h2>
+
+  <select id="country">
+    <option value="">Select Country</option>
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Kuwait">Kuwait</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Europe">Europe</option>
+  </select>
+
+  <br><br>
+
+  <button class="btn" onclick="applyVisa()">Apply Now</button>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Swapna Towers, Tiruppur</p>
+  <p>📞 08438366136</p>
+
+  <br>
+  <button class="btn" onclick="whatsapp()">WhatsApp Now</button>
+</section>
+
+<footer>
+  <p>© 2026 Noor Travels</p>
+</footer>
+
+<script>
+function contact(){
+  window.location.href="#contact";
+}
+
+function whatsapp(){
+  window.open("https://wa.me/918438366136","_blank");
+}
+
+function applyVisa(){
+  let country = document.getElementById("country").value;
+
+  if(country === ""){
+    alert("Please select a country");
+    return;
+  }
+
+  let message = "Hello, I need " + country + " visa service";
+  let url = "https://wa.me/918438366136?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
