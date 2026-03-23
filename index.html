@@ -1,218 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noor Travels & Manpower Service</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
-body{
-  background:#f5f7fa;
-}
-
-/* NAVBAR */
-nav{
-  background:#0a2540;
-  color:white;
-  padding:15px 50px;
-  display:flex;
-  justify-content:space-between;
-}
-
-nav h1{
-  font-size:20px;
-}
-
-nav a{
-  color:white;
-  margin-left:20px;
-  text-decoration:none;
-}
-
-/* HERO BACKGROUND IMAGE */
-.hero{
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url('BackGround.jpg');
-  background-size:cover;
-  background-position:center;
-  color:white;
-  padding:100px 50px;
-  text-align:center;
-}
-
-/* APPLY SECTION BACKGROUND */
-.apply-bg{
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url('Select.jpg');
-  background-size:cover;
-  background-position:center;
-  color:white;
-}
-
-.hero h1{
-  font-size:40px;
-}
-
-.hero p{
-  margin:15px 0;
-}
-
-.btn{
-  background:#ff7a00;
-  padding:10px 20px;
-  color:white;
-  border:none;
-  cursor:pointer;
-}
-
-/* SECTION */
-.section{
-  padding:50px;
-  text-align:center;
-}
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* CONTACT */
-.contact{
-  background:#0a2540;
-  color:white;
-  padding:50px;
-}
-
-/* FOOTER */
-footer{
-  background:#000;
-  color:white;
-  text-align:center;
-  padding:10px;
-}
-
-/* SELECT BOX */
-select{
-  padding:10px;
-  width:250px;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Noor Travels & Manpower Service in Tiruppur for visa support, flight booking, passport help, tours, attestation, and manpower guidance."
+  >
+  <title>Noor Travels &amp; Manpower Service</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="page-glow page-glow-one" aria-hidden="true"></div>
+  <div class="page-glow page-glow-two" aria-hidden="true"></div>
 
-<!-- NAVBAR -->
-<nav>
-  <h1>NOOR TRAVELS</h1>
-  <div>
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="#apply">Apply Visa</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Noor Travels home">
+        <span class="brand-mark">NT</span>
+        <span class="brand-copy">
+          <strong>Noor Travels</strong>
+          <small>Visa, Ticketing &amp; Manpower Support</small>
+        </span>
+      </a>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Noor Travels & Manpower Service</h1>
-  <p>Trusted Travel & Visa Service Provider</p>
-  <button class="btn" onclick="contact()">Contact Now</button>
-</section>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2>About Us</h2>
-  <p>
-    Saudi Arabia, Singapore & Europe visa services, manpower support,
-    flight booking, passport services and more. Trusted & professional service.
-  </p>
-</section>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://wa.me/918438366136" target="_blank" rel="noreferrer">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-  <h2>Our Services</h2>
+  <main>
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Based in Tiruppur, Tamil Nadu</p>
+          <h1>Travel plans, visa support, and manpower guidance in one trusted place.</h1>
+          <p class="hero-text">
+            Noor Travels &amp; Manpower Service helps with Gulf routes, Singapore and Europe-bound
+            applications, flight tickets, passport work, immigration clearance, attestation,
+            hotels, tours, and related travel support.
+          </p>
 
-  <div class="services">
-    <div class="card"><h3>Visa Services</h3><p>Saudi, Kuwait, Qatar, Europe</p></div>
-    <div class="card"><h3>Flight Booking</h3><p>International & Domestic</p></div>
-    <div class="card"><h3>Passport</h3><p>New & Renewal</p></div>
-    <div class="card"><h3>Manpower</h3><p>Work permits</p></div>
-    <div class="card"><h3>Immigration</h3><p>Clearance & stamping</p></div>
-    <div class="card"><h3>Tours</h3><p>Hotels & travel</p></div>
-  </div>
-</section>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Start Your Enquiry</a>
+            <a class="button button-secondary" href="tel:+918438366136">Call +91 84383 66136</a>
+          </div>
 
-<!-- APPLY VISA WITH BACKGROUND -->
-<section class="section apply-bg" id="apply">
-  <h2>Apply Visa by Country</h2>
+          <div class="hero-pills" aria-label="Key services">
+            <span>Visa Assistance</span>
+            <span>Flight Booking</span>
+            <span>Passport Help</span>
+            <span>Manpower Support</span>
+          </div>
 
-  <select id="country">
-    <option value="">Select Country</option>
-    <option value="Saudi Arabia">Saudi Arabia</option>
-    <option value="Kuwait">Kuwait</option>
-    <option value="Qatar">Qatar</option>
-    <option value="Singapore">Singapore</option>
-    <option value="Europe">Europe</option>
-  </select>
+          <div class="hero-metrics">
+            <article>
+              <strong>7+</strong>
+              <span>Popular visa routes</span>
+            </article>
+            <article>
+              <strong>6</strong>
+              <span>Core service areas</span>
+            </article>
+            <article>
+              <strong>9:30 AM</strong>
+              <span>Listing start time</span>
+            </article>
+          </div>
+        </div>
 
-  <br><br>
+        <div class="hero-panel">
+          <div class="panel-card inquiry-card reveal">
+            <p class="card-kicker">Quick WhatsApp enquiry</p>
+            <h2>Tell us where you want to go.</h2>
+            <p>Choose a destination and service. We will prepare a WhatsApp message for you.</p>
 
-  <button class="btn" onclick="applyVisa()">Apply Now</button>
-</section>
+            <form class="inquiry-form" id="inquiry-form">
+              <label for="traveller-name">Your name</label>
+              <input id="traveller-name" name="traveller-name" type="text" placeholder="Enter your name">
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <p>📍 Swapna Towers, Tiruppur</p>
-  <p>📞 08438366136</p>
+              <label for="service-type">Need help with</label>
+              <select id="service-type" name="service-type">
+                <option value="Visa service">Visa service</option>
+                <option value="Flight booking">Flight booking</option>
+                <option value="Passport support">Passport support</option>
+                <option value="Manpower service">Manpower service</option>
+                <option value="Attestation and clearance">Attestation and clearance</option>
+                <option value="Hotels and tours">Hotels and tours</option>
+              </select>
 
-  <br>
-  <button class="btn" onclick="whatsapp()">WhatsApp Now</button>
-</section>
+              <label for="country">Destination</label>
+              <select id="country" name="country">
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Schengen Europe">Schengen Europe</option>
+              </select>
 
-<footer>
-  <p>© 2026 Noor Travels</p>
-</footer>
+              <button class="button button-primary button-block" type="submit">Send WhatsApp Request</button>
+            </form>
+          </div>
 
-<script>
-function contact(){
-  window.location.href="#contact";
-}
+          <aside class="panel-card location-card reveal">
+            <p class="card-kicker">Visit the office</p>
+            <h2>Swapna Towers, Tiruppur</h2>
+            <p>
+              Stanes 4th Street, Avinashi - Tiruppur Road, Tiruppur, Tamil Nadu 641602.
+            </p>
+            <div class="location-actions">
+              <a class="inline-link" href="https://maps.google.com/?q=Swapna+towers+stanes+4th+Street+Avinashi+Tiruppur+Road+Tiruppur+Tamil+Nadu+641602" target="_blank" rel="noreferrer">Open map</a>
+              <a class="inline-link" href="https://wa.me/918438366136" target="_blank" rel="noreferrer">WhatsApp now</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-function whatsapp(){
-  window.open("https://wa.me/918438366136","_blank");
-}
+    <section class="route-strip reveal" aria-label="Popular destinations">
+      <div class="container route-strip-track">
+        <span>Saudi Arabia</span>
+        <span>Kuwait</span>
+        <span>Qatar</span>
+        <span>Singapore</span>
+        <span>Serbia</span>
+        <span>Lithuania</span>
+        <span>Schengen Europe</span>
+      </div>
+    </section>
 
-function applyVisa(){
-  let country = document.getElementById("country").value;
+    <section class="section reveal" id="about">
+      <div class="container split-layout">
+        <div>
+          <p class="section-tag">About Noor Travels</p>
+          <h2>Built for travellers, workers, and families who want a clearer process.</h2>
+          <p class="section-text">
+            The business listing describes Noor Travels &amp; Manpower Service as a travel agent
+            offering flights, excursion booking, group travel, hotels, international service, visa
+            support, immigration clearance, and attestation. This site brings those services into a
+            cleaner, easier experience so enquiries can start quickly.
+          </p>
+        </div>
 
-  if(country === ""){
-    alert("Please select a country");
-    return;
-  }
+        <div class="story-card">
+          <div class="story-overlay">
+            <p class="card-kicker">What people ask for most</p>
+            <ul class="story-list">
+              <li>Employment and visit visa guidance</li>
+              <li>Saudi and Kuwait visa stamping support</li>
+              <li>Flight tickets and travel planning</li>
+              <li>Passport new issue and renewal help</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  let message = "Hello, I need " + country + " visa service";
-  let url = "https://wa.me/918438366136?text=" + encodeURIComponent(message);
+    <section class="section reveal" id="services">
+      <div class="container">
+        <p class="section-tag">Services</p>
+        <div class="section-heading">
+          <h2>Everything arranged in one travel desk.</h2>
+          <p>Use one point of contact for documents, tickets, and travel preparation.</p>
+        </div>
 
-  window.open(url, "_blank");
-}
-</script>
+        <div class="card-grid">
+          <article class="service-card">
+            <span class="service-index">01</span>
+            <h3>Visa Services</h3>
+            <p>Support for Saudi Arabia, Kuwait, Qatar, Singapore, Serbia, Lithuania, and Schengen Europe enquiries.</p>
+          </article>
 
+          <article class="service-card">
+            <span class="service-index">02</span>
+            <h3>Flight Booking</h3>
+            <p>Domestic and international ticketing for individual travellers, workers, and family trips.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-index">03</span>
+            <h3>Passport Support</h3>
+            <p>Guidance for new passport applications, renewals, and related document preparation.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-index">04</span>
+            <h3>Manpower Assistance</h3>
+            <p>Help with work permit related travel preparation and overseas manpower process support.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-index">05</span>
+            <h3>Attestation &amp; Clearance</h3>
+            <p>Immigration clearance, visa stamping coordination, and attestation-linked assistance.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-index">06</span>
+            <h3>Hotels &amp; Tours</h3>
+            <p>Group travel, hotels, excursions, and add-on planning for smoother departures.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted reveal" id="destinations">
+      <div class="container">
+        <p class="section-tag">Destinations</p>
+        <div class="section-heading">
+          <h2>Popular enquiry routes</h2>
+          <p>These are the destinations and visa categories already reflected in the existing business details.</p>
+        </div>
+
+        <div class="destination-grid">
+          <article class="destination-card">
+            <h3>Saudi Arabia</h3>
+            <p>Visa guidance, ticket booking, and stamping-related support.</p>
+          </article>
+
+          <article class="destination-card">
+            <h3>Kuwait</h3>
+            <p>Employment-focused enquiries and visa stamping assistance.</p>
+          </article>
+
+          <article class="destination-card">
+            <h3>Qatar</h3>
+            <p>Travel planning and permit-related enquiry handling.</p>
+          </article>
+
+          <article class="destination-card">
+            <h3>Singapore</h3>
+            <p>Travel and visa support for quick international planning.</p>
+          </article>
+
+          <article class="destination-card">
+            <h3>Serbia &amp; Lithuania</h3>
+            <p>Europe-bound routes listed in the current business information.</p>
+          </article>
+
+          <article class="destination-card">
+            <h3>Schengen Europe</h3>
+            <p>General Europe visa enquiry support through WhatsApp-first contact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="process">
+      <div class="container">
+        <p class="section-tag">Process</p>
+        <div class="section-heading">
+          <h2>A straightforward enquiry flow.</h2>
+          <p>The site keeps the first step simple so customers can reach the team without confusion.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span>01</span>
+            <h3>Share your plan</h3>
+            <p>Tell the team your destination, travel purpose, and the service you need.</p>
+          </article>
+
+          <article class="process-card">
+            <span>02</span>
+            <h3>Confirm documents</h3>
+            <p>Get guidance on the likely documents and next steps for your enquiry.</p>
+          </article>
+
+          <article class="process-card">
+            <span>03</span>
+            <h3>Move into booking</h3>
+            <p>Proceed with visa support, tickets, passport help, or travel coordination.</p>
+          </article>
+
+          <article class="process-card">
+            <span>04</span>
+            <h3>Stay connected</h3>
+            <p>Continue the discussion by WhatsApp or phone for updates and follow-up questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="reviews">
+      <div class="container">
+        <p class="section-tag">Reviews</p>
+        <div class="section-heading">
+          <h2>Words already associated with the business listing.</h2>
+          <p>These short summaries are adapted from the reviews found in the project notes.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <blockquote class="testimonial-card">
+            <p>Reliable attestation support and a professional, friendly experience.</p>
+            <footer>Karthi</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>Trusted Kuwait employment visa support with fast stamping assistance.</p>
+            <footer>Abdul Samad</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>Cost-efficient travel agency service for Saudi Arabia related travel needs.</p>
+            <footer>Google listing notes</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section reveal" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-tag">Contact</p>
+          <h2>Ready to begin your travel or visa enquiry?</h2>
+          <p class="section-text">
+            Reach Noor Travels by call or WhatsApp, or visit the Tiruppur office for a direct conversation.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span>Phone</span>
+            <a href="tel:+918438366136">+91 84383 66136</a>
+          </div>
+          <div class="contact-row">
+            <span>Office</span>
+            <p>Swapna Towers, Stanes 4th Street, Avinashi - Tiruppur Road, Tiruppur 641602</p>
+          </div>
+          <div class="contact-row">
+            <span>Hours note</span>
+            <p>Business notes mention a 9:30 AM opening time.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="https://wa.me/918438366136" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+            <a class="button button-secondary" href="tel:+919092921262">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>Noor Travels &amp; Manpower Service</p>
+      <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+
