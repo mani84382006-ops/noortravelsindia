@@ -2,7 +2,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const yearNode = document.querySelector("#year");
 const inquiryForm = document.querySelector("#inquiry-form");
-const whatsappNumber = "919688879994";
+const whatsappNumber = "9196888 79994";
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
