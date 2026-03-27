@@ -1,18 +1,27 @@
+const inquiryForm = document.querySelector("#inquiry-form");
+
+// ✅ Fixed WhatsApp number
+const whatsappNumber = "919688879994";
+
 if (inquiryForm) {
-  inquiryForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+  inquiryForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const name = document.querySelector("#traveller-name")?.value.trim() || "Customer";
-    const service = document.querySelector("#service-type")?.value || "Visa service";
-    const country = document.querySelector("#country")?.value || "Saudi Arabia";
-    const custom = document.querySelector("#custom-service")?.value || "";
+    // Get values
+    let name = document.getElementById("traveller-name").value || "Customer";
+    let country = document.getElementById("country").value;
+    let service = document.getElementById("service-type").value;
+    let custom = document.getElementById("custom-service").value || "";
 
-    const message = `Hi Noor Travels,
+    // Message format
+    let message = `Hi Noor Travels,
 Name: ${name}
 Destination: ${country}
 Service: ${service}
 Other: ${custom}`;
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    // Open WhatsApp
+    let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   });
 }
