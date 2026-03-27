@@ -4,6 +4,20 @@ const yearNode = document.querySelector("#year");
 const inquiryForm = document.querySelector("#inquiry-form");
 const whatsappNumber = "919688879994";
 
+function toggleCertificate() {
+  const cert = document.getElementById("certificate");
+
+  if (cert.style.display === "none") {
+    cert.style.display = "block";
+    cert.scrollIntoView({ behavior: "smooth" });
+  } else {
+    cert.style.display = "none";
+  }
+}
+
+
+
+
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
