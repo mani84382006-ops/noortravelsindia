@@ -16,8 +16,6 @@ function toggleCertificate() {
 }
 
 
-
-
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
