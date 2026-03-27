@@ -209,7 +209,7 @@ select {
   background:
     linear-gradient(135deg, rgba(6, 21, 19, 0.35), rgba(6, 21, 19, 0.75)),
     linear-gradient(120deg, rgba(201, 130, 49, 0.18), transparent 45%),
-    url("old/BackGround.jpg") center/cover no-repeat;
+    url("BackGround.jpg") center/cover no-repeat;
   box-shadow: var(--shadow-lg);
 }
 
@@ -409,7 +409,7 @@ select {
   color: var(--white);
   background:
     linear-gradient(180deg, rgba(8, 23, 20, 0.14), rgba(8, 23, 20, 0.82)),
-    url("old/Select.jpg") center/cover no-repeat;
+    url("Select.jpg") center/cover no-repeat;
 }
 
 .location-card p,
@@ -489,7 +489,7 @@ select {
   background:
     linear-gradient(180deg, rgba(11, 30, 27, 0.14), rgba(11, 30, 27, 0.8)),
     linear-gradient(135deg, rgba(201, 130, 49, 0.2), transparent),
-    url("old/Select.jpg") center/cover no-repeat;
+    url("Select.jpg") center/cover no-repeat;
   box-shadow: var(--shadow-md);
 }
 
