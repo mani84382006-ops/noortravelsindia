@@ -74,6 +74,43 @@ if ("IntersectionObserver" in window && revealItems.length) {
     }
   );
 
+     
+  document.getElementById("inquiry-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Get values
+  var name = document.getElementById("traveller-name").value;
+  var country = document.getElementById("country").value;
+  var service = document.getElementById("service-type").value;
+  var custom = document.getElementById("custom-service").value;
+
+  // Message create
+  var message = "Hello, my name is " + name + ".\n";
+  message += "I need " + service + " for " + country + ".\n";
+
+  if(custom !== "") {
+    message += "Additional requirement: " + custom + ".\n";
+  }
+
+  message += "Please provide details.";
+
+  // Encode message
+  var encodedMessage = encodeURIComponent(message);
+
+  // WhatsApp number
+  var phone = "919688879994";
+
+  // Open WhatsApp
+  var url = "https://wa.me/" + phone + "?text=" + encodedMessage;
+
+  window.open(url, "_blank");
+});
+
+
+
+
+
+
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
