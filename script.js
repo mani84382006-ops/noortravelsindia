@@ -15,9 +15,6 @@ function toggleCertificate() {
   }
 }
 
-
-
-
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -44,14 +41,25 @@ if (inquiryForm) {
     const name = document.querySelector("#traveller-name")?.value.trim() || "Customer";
     const service = document.querySelector("#service-type")?.value || "Visa service";
     const country = document.querySelector("#country")?.value || "Saudi Arabia";
-    const message = [
+    const custom = document.querySelector("#custom-service")?.value.trim() || "";
+
+    let message = [
       "Hello Noor Travels,",
       `My name is ${name}.`,
-      `I need help with ${service} for ${country}.`,
-      "Please share the next steps."
+      `I need help with ${service} for ${country}.`
     ].join(" ");
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    if (custom !== "") {
+      message += ` Additional requirement: ${custom}.`;
+    }
+
+    message += " Please share the next steps.";
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener"
+    );
   });
 }
 
@@ -64,7 +72,6 @@ if ("IntersectionObserver" in window && revealItems.length) {
         if (!entry.isIntersecting) {
           return;
         }
-
         entry.target.classList.add("is-visible");
         revealObserver.unobserve(entry.target);
       });
@@ -73,43 +80,6 @@ if ("IntersectionObserver" in window && revealItems.length) {
       threshold: 0.14
     }
   );
-
-     
-  document.getElementById("inquiry-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  // Get values
-  var name = document.getElementById("traveller-name").value;
-  var country = document.getElementById("country").value;
-  var service = document.getElementById("service-type").value;
-  var custom = document.getElementById("custom-service").value;
-
-  // Message create
-  var message = "Hello, my name is " + name + ".\n";
-  message += "I need " + service + " for " + country + ".\n";
-
-  if(custom !== "") {
-    message += "Additional requirement: " + custom + ".\n";
-  }
-
-  message += "Please provide details.";
-
-  // Encode message
-  var encodedMessage = encodeURIComponent(message);
-
-  // WhatsApp number
-  var phone = "919688879994";
-
-  // Open WhatsApp
-  var url = "https://wa.me/" + phone + "?text=" + encodedMessage;
-
-  window.open(url, "_blank");
-});
-
-
-
-
-
 
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
