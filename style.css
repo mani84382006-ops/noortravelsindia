@@ -1,9 +1,3 @@
-
-Copy
-
-/* ============================================================
-   DESIGN TOKENS
-   ============================================================ */
 :root {
   --bg: #f6efe3;
   --bg-deep: #11352f;
@@ -23,21 +17,17 @@ Copy
   --radius-md: 18px;
   --max-width: 1180px;
 }
- 
- 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
- 
+
 html {
   scroll-behavior: smooth;
 }
- 
+
 body {
   margin: 0;
   color: var(--ink);
@@ -49,27 +39,23 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
- 
+
 img {
   display: block;
   max-width: 100%;
 }
- 
+
 a {
   color: inherit;
   text-decoration: none;
 }
- 
+
 button,
 input,
 select {
   font: inherit;
 }
- 
- 
-/* ============================================================
-   UTILITIES
-   ============================================================ */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -81,16 +67,12 @@ select {
   white-space: nowrap;
   border: 0;
 }
- 
+
 .container {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
 }
- 
- 
-/* ============================================================
-   PAGE GLOW (decorative fixed accents)
-   ============================================================ */
+
 .page-glow {
   position: fixed;
   z-index: -1;
@@ -98,7 +80,7 @@ select {
   filter: blur(12px);
   opacity: 0.8;
 }
- 
+
 .page-glow-one {
   top: 90px;
   right: -80px;
@@ -106,7 +88,7 @@ select {
   height: 260px;
   background: rgba(201, 130, 49, 0.16);
 }
- 
+
 .page-glow-two {
   bottom: 120px;
   left: -90px;
@@ -114,22 +96,18 @@ select {
   height: 320px;
   background: rgba(17, 53, 47, 0.12);
 }
- 
- 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 0.75rem 0 0;
+  padding: 1rem 0 0;
 }
- 
+
 .nav-shell {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
-  padding: 0.6rem 1.25rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,75 +118,21 @@ select {
   background: rgba(255, 249, 239, 0.72);
   box-shadow: 0 10px 35px rgba(19, 34, 32, 0.08);
 }
- 
+
 .brand {
   display: inline-flex;
   align-items: center;
   min-width: 0;
 }
- 
-/* Medium-size logo: balanced for a pill navbar */
+
 .brand-logo {
-  display: block;
-  width: clamp(38px, 5vw, 52px);
-  height: clamp(38px, 5vw, 52px);
+  width: clamp(55px, 6vw, 70px);
+  height: clamp(55px, 6vw, 70px);
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 }
- 
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  font-size: 0.95rem;
-}
- 
-.site-nav a {
-  color: var(--ink-soft);
-  transition: color 180ms ease, transform 180ms ease;
-}
- 
-/* Merged: color + lift for nav links and inline links on hover */
-.site-nav a:hover,
-.site-nav a:focus-visible,
-.inline-link:hover,
-.inline-link:focus-visible {
-  color: var(--accent-strong);
-  transform: translateY(-1px);
-}
- 
-.nav-cta {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: rgba(17, 53, 47, 0.08);
-  color: var(--ink);
-}
- 
-.nav-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 0;
-  border-radius: 12px;
-  background: rgba(17, 53, 47, 0.08);
-  cursor: pointer;
-}
- 
-.nav-toggle span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  margin: 4px auto;
-  background: var(--ink);
-  border-radius: 999px;
-}
- 
- 
-/* ============================================================
-   SERIF FONT INHERITANCE (headings & key text)
-   ============================================================ */
+
 .hero h1,
 .section h2,
 .panel-card h2,
@@ -220,49 +144,64 @@ select {
 .contact-card p {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
- 
- 
-/* ============================================================
-   KICKERS / EYEBROWS (shared structure, split colors)
-   ============================================================ */
- 
-/* Shared layout & typographic styles */
-.eyebrow,
-.section-tag,
-.card-kicker {
-  margin: 0 0 0.9rem;
-  font-size: 0.84rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.95rem;
 }
- 
-/* Hero eyebrow lives on dark backgrounds */
-.eyebrow {
-  color: #f0d8b6;
+
+.site-nav a {
+  color: var(--ink-soft);
+  transition: color 180ms ease, transform 180ms ease;
 }
- 
-/* Card kickers and section tags live on light backgrounds */
-.card-kicker,
-.section-tag {
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.inline-link:hover,
+.inline-link:focus-visible {
   color: var(--accent-strong);
 }
- 
- 
-/* ============================================================
-   HERO
-   ============================================================ */
+
+.nav-cta {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(17, 53, 47, 0.08);
+  color: var(--ink);
+}
+
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(17, 53, 47, 0.08);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--ink);
+  border-radius: 999px;
+}
+
 .hero {
   padding: 6rem 0 2rem;
 }
- 
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 1.5rem;
   align-items: stretch;
 }
- 
+
 .hero-copy {
   position: relative;
   padding: 3rem;
@@ -275,7 +214,7 @@ select {
     url("BackGround.jpg") center/cover no-repeat;
   box-shadow: var(--shadow-lg);
 }
- 
+
 .hero-copy::after {
   content: "";
   position: absolute;
@@ -286,7 +225,18 @@ select {
   background: linear-gradient(135deg, rgba(201, 130, 49, 0.36), rgba(255, 255, 255, 0.05));
   transform: rotate(14deg);
 }
- 
+
+.eyebrow,
+.section-tag,
+.card-kicker {
+  margin: 0 0 0.9rem;
+  color: #f0d8b6;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .hero h1 {
   margin: 0;
   max-width: 12ch;
@@ -294,150 +244,26 @@ select {
   line-height: 0.96;
   letter-spacing: -0.04em;
 }
- 
+
 .hero-text {
   max-width: 58ch;
   margin: 1.4rem 0 0;
   font-size: 1.02rem;
   color: rgba(255, 249, 239, 0.9);
 }
- 
+
+.hero-actions,
+.contact-actions,
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
   margin-top: 2rem;
 }
- 
-.hero-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 2rem;
-}
- 
-.hero-pills span {
-  padding: 0.7rem 0.95rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  font-size: 0.88rem;
-}
- 
-.hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2.2rem;
-}
- 
-.hero-metrics article {
-  padding: 1rem;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-}
- 
-.hero-metrics strong {
-  display: block;
-  font-size: 1.35rem;
-}
- 
-.hero-metrics span {
-  display: block;
-  margin-top: 0.2rem;
-  font-size: 0.84rem;
-  color: rgba(255, 249, 239, 0.8);
-}
- 
- 
-/* ============================================================
-   HERO PANEL CARDS
-   ============================================================ */
-.hero-panel {
-  display: grid;
-  gap: 1rem;
-}
- 
-.panel-card {
-  border-radius: var(--radius-xl);
-  padding: 1.65rem;
-  background: var(--panel-light);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: var(--shadow-md);
-}
- 
-.panel-card h2 {
-  margin: 0;
-  font-size: 1.9rem;
-  line-height: 1;
-}
- 
-.panel-card p {
-  margin: 0.65rem 0 0;
-  color: var(--ink-soft);
-}
- 
-.location-card {
-  position: relative;
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
-  color: var(--white);
-  background:
-    linear-gradient(180deg, rgba(8, 23, 20, 0.14), rgba(8, 23, 20, 0.82)),
-    url("Select.jpg") center/cover no-repeat;
-}
- 
-.location-card p,
-.location-card a {
-  color: rgba(255, 249, 239, 0.88);
-}
- 
-.inline-link {
-  font-weight: 700;
-}
- 
- 
-/* ============================================================
-   INQUIRY FORM
-   ============================================================ */
-.inquiry-form {
-  display: grid;
-  gap: 0.85rem;
-  margin-top: 1.4rem;
-}
- 
-.inquiry-form label {
-  font-size: 0.87rem;
-  font-weight: 700;
-  color: var(--ink);
-}
- 
-.inquiry-form input,
-.inquiry-form select {
-  width: 100%;
-  min-height: 50px;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.82);
-  color: var(--ink);
-  outline: none;
-}
- 
-.inquiry-form input:focus,
-.inquiry-form select:focus {
-  border-color: rgba(201, 130, 49, 0.55);
-  box-shadow: 0 0 0 4px rgba(201, 130, 49, 0.12);
-}
- 
- 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -450,63 +276,177 @@ select {
   font-weight: 700;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
- 
+
 .button:hover,
-.button:focus-visible {
+.button:focus-visible,
+.site-nav a:hover,
+.site-nav a:focus-visible {
   transform: translateY(-1px);
 }
- 
+
 .button-primary {
   background: linear-gradient(135deg, var(--accent), #e9c18b);
   color: var(--white);
   box-shadow: 0 12px 28px rgba(156, 90, 16, 0.25);
 }
- 
+
 .button-secondary {
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.08);
   color: var(--white);
 }
- 
+
 .button-block {
   width: 100%;
 }
- 
- 
-/* ============================================================
-   ROUTE STRIP
-   ============================================================ */
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.hero-pills span,
+.route-strip-track span {
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 0.88rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.hero-metrics article {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.hero-metrics strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.hero-metrics span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.84rem;
+  color: rgba(255, 249, 239, 0.8);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-card {
+  border-radius: var(--radius-xl);
+  padding: 1.65rem;
+  background: var(--panel-light);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.panel-card h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.panel-card p {
+  margin: 0.65rem 0 0;
+  color: var(--ink-soft);
+}
+
+.card-kicker,
+.section-tag {
+  color: var(--accent-strong);
+}
+
+.inquiry-form {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.4rem;
+}
+
+.inquiry-form label {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.inquiry-form input,
+.inquiry-form select {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  outline: none;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus {
+  border-color: rgba(201, 130, 49, 0.55);
+  box-shadow: 0 0 0 4px rgba(201, 130, 49, 0.12);
+}
+
+.location-card {
+  position: relative;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(180deg, rgba(8, 23, 20, 0.14), rgba(8, 23, 20, 0.82)),
+    url("Select.jpg") center/cover no-repeat;
+}
+
+.location-card p,
+.location-card a {
+  color: rgba(255, 249, 239, 0.88);
+}
+
+.inline-link {
+  font-weight: 700;
+}
+
 .route-strip {
   padding: 0 0 1rem;
 }
- 
+
 .route-strip-track {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: center;
 }
- 
+
 .route-strip-track span {
-  padding: 0.7rem 0.95rem;
-  border-radius: 999px;
   background: rgba(17, 53, 47, 0.07);
-  border: 1px solid rgba(17, 53, 47, 0.08);
-  font-size: 0.88rem;
+  border-color: rgba(17, 53, 47, 0.08);
 }
- 
- 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
+
 .section {
   padding: 2rem 0 5rem;
 }
- 
+
 .section-tinted {
   position: relative;
 }
- 
+
 .section-tinted::before {
   content: "";
   position: absolute;
@@ -514,7 +454,7 @@ select {
   background: linear-gradient(180deg, rgba(17, 53, 47, 0.05), rgba(201, 130, 49, 0.06));
   z-index: -1;
 }
- 
+
 .section-heading {
   display: flex;
   align-items: end;
@@ -522,28 +462,28 @@ select {
   gap: 1rem;
   margin-bottom: 1.8rem;
 }
- 
+
 .section h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.3rem);
   line-height: 0.98;
   color: var(--bg-deep);
 }
- 
+
 .section-heading p,
 .section-text {
   max-width: 56ch;
   margin: 0.9rem 0 0;
   color: var(--ink-soft);
 }
- 
+
 .split-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
   gap: 1.5rem;
   align-items: stretch;
 }
- 
+
 .story-card {
   min-height: 360px;
   border-radius: var(--radius-xl);
@@ -554,7 +494,7 @@ select {
     url("Select.jpg") center/cover no-repeat;
   box-shadow: var(--shadow-md);
 }
- 
+
 .story-overlay {
   height: 100%;
   display: flex;
@@ -562,21 +502,17 @@ select {
   justify-content: flex-end;
   padding: 1.7rem;
 }
- 
+
 .story-list {
   margin: 0.75rem 0 0;
   padding-left: 1.2rem;
   color: rgba(255, 249, 239, 0.9);
 }
- 
+
 .story-list li + li {
   margin-top: 0.55rem;
 }
- 
- 
-/* ============================================================
-   CARDS (services, destinations, process, testimonials)
-   ============================================================ */
+
 .card-grid,
 .destination-grid,
 .process-grid,
@@ -585,7 +521,7 @@ select {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
 }
- 
+
 .service-card,
 .destination-card,
 .process-card,
@@ -599,8 +535,7 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.42);
   box-shadow: var(--shadow-md);
 }
- 
-/* Decorative corner accent on informational cards */
+
 .service-card::after,
 .destination-card::after,
 .process-card::after {
@@ -613,7 +548,7 @@ select {
   background: linear-gradient(135deg, rgba(201, 130, 49, 0.18), rgba(17, 53, 47, 0.05));
   transform: rotate(24deg);
 }
- 
+
 .service-index,
 .process-card span {
   display: inline-flex;
@@ -629,7 +564,7 @@ select {
   font-weight: 700;
   letter-spacing: 0.08em;
 }
- 
+
 .service-card h3,
 .destination-card h3,
 .process-card h3 {
@@ -638,7 +573,7 @@ select {
   line-height: 1.05;
   color: var(--bg-deep);
 }
- 
+
 .service-card p,
 .destination-card p,
 .process-card p,
@@ -649,12 +584,11 @@ select {
   margin: 0;
   color: var(--ink-soft);
 }
- 
-/* Testimonial card */
+
 .testimonial-card {
   padding-top: 2rem;
 }
- 
+
 .testimonial-card::before {
   content: '"';
   position: absolute;
@@ -665,44 +599,40 @@ select {
   font-size: 5rem;
   line-height: 1;
 }
- 
+
 .testimonial-card footer {
   margin-top: 1.1rem;
   font-size: 1.1rem;
   color: var(--bg-deep);
 }
- 
- 
-/* ============================================================
-   CONTACT SECTION
-   ============================================================ */
+
 .contact-section {
   padding-bottom: 6rem;
 }
- 
+
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
   gap: 1.5rem;
   align-items: start;
 }
- 
+
 .contact-card {
   background: linear-gradient(180deg, rgba(17, 53, 47, 0.96), rgba(17, 53, 47, 0.84));
   color: var(--white);
 }
- 
+
 .contact-card a,
 .contact-card p {
   color: rgba(255, 249, 239, 0.92);
 }
- 
+
 .contact-row + .contact-row {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
- 
+
 .contact-row span {
   display: block;
   margin-bottom: 0.4rem;
@@ -712,23 +642,15 @@ select {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
- 
-.contact-actions,
-.location-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
+
+.contact-actions {
   margin-top: 1.5rem;
 }
- 
- 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+
 .site-footer {
   padding: 0 0 2rem;
 }
- 
+
 .footer-shell {
   display: flex;
   justify-content: space-between;
@@ -738,44 +660,18 @@ select {
   background: rgba(17, 53, 47, 0.08);
   color: var(--ink-soft);
 }
- 
- 
-/* ============================================================
-   SCROLL REVEAL
-   ============================================================ */
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 560ms ease, transform 560ms ease;
 }
- 
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
- 
- 
-/* ============================================================
-   CERTIFICATE GRID
-   ============================================================ */
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  margin-top: 20px;
-}
- 
-.certificate-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
- 
- 
-/* ============================================================
-   RESPONSIVE — 980px breakpoint
-   ============================================================ */
+
 @media (max-width: 980px) {
   .hero-grid,
   .split-layout,
@@ -786,33 +682,29 @@ select {
   .testimonial-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
- 
+
   .hero-grid,
   .split-layout,
   .contact-grid {
     align-items: start;
   }
 }
- 
- 
-/* ============================================================
-   RESPONSIVE — 760px breakpoint (mobile)
-   ============================================================ */
+
 @media (max-width: 760px) {
   .site-header {
     padding-top: 0.75rem;
   }
- 
+
   .nav-shell {
     position: relative;
     border-radius: 28px;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
   }
- 
+
   .nav-toggle {
     display: inline-block;
   }
- 
+
   .site-nav {
     position: absolute;
     top: calc(100% + 0.6rem);
@@ -826,29 +718,33 @@ select {
     background: rgba(255, 249, 239, 0.96);
     box-shadow: var(--shadow-md);
   }
- 
+
   .site-nav.is-open {
     display: flex;
   }
- 
+
   .hero {
     padding-top: 5rem;
   }
- 
+
+  .brand-logo {
+    width: min(190px, 100%);
+  }
+
   .hero-copy,
   .panel-card {
     padding: 1.5rem;
   }
- 
+
   .hero h1 {
     max-width: none;
     font-size: clamp(2.4rem, 11vw, 4rem);
   }
- 
+
   .hero-metrics {
     grid-template-columns: 1fr;
   }
- 
+
   .hero-grid,
   .split-layout,
   .contact-grid,
@@ -858,22 +754,18 @@ select {
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
- 
+
   .section-heading,
   .footer-shell {
     display: block;
   }
 }
- 
- 
-/* ============================================================
-   REDUCED MOTION
-   ============================================================ */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
- 
+
   *,
   *::before,
   *::after {
@@ -882,10 +774,28 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
- 
+
   .reveal {
     opacity: 1;
     transform: none;
   }
 }
- 
+
+
+/* ✅ FIX: Certificate Images Proper Layout */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.certificate-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+
