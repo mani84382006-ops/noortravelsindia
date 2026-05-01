@@ -200,7 +200,10 @@ if ("IntersectionObserver" in window && revealItems.length) {
         });
  
         setTimeout(() => {
-  window.location.href = "YOUR-REAL-LINK";
+  window.open(
+    "https://search.google.com/local/writereview?placeid=YOUR_REAL_PLACE_ID",
+    "_blank"
+  );
 }, 1500);
  
       } else {
