@@ -1,6 +1,3 @@
-
-Copy
-
 /* ============================================================
    NOOR TRAVELS — script.js
    Bug fixes applied:
