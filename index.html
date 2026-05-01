@@ -16,12 +16,12 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://noortreavelsindia.com/">
   <meta name="google-site-verification" content="9Qzqf86oFDKnTJ5X3nTFJwnD5PUoz3kzwORGMLx052U" />
-<!-- ✅ Favicon (SEO + Google icon) -->
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-<link rel="shortcut icon" href="/favicon.png">
 
+  <!-- ✅ Favicon (SEO + Google icon) -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
 
   <!-- ✅ Open Graph / Social SEO -->
   <meta property="og:title" content="Noor Travels Tiruppur | Visa, Passport &amp; Manpower Services">
@@ -48,28 +48,29 @@
     "logo": "https://noortreavelsindia.com/noor-travels-logo.png",
     "url": "https://noortreavelsindia.com/",
     "telephone": "+919688879994",
-"email": "noortravelsacc12@gmail.com"
-"foundingDate": "2009",
-   "address": {
-  "@type": "PostalAddress",
-  "streetAddress": "Noor Travels , 2nd Floor B2 Swapna Towers, Stanes 4th Street",
-  "addressLocality": "Tiruppur",
+    "email": "noortravelsacc12@gmail.com",
+    "foundingDate": "2009",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Noor Travels , 2nd Floor B2 Swapna Towers, Stanes 4th Street",
+      "addressLocality": "Tiruppur",
       "addressRegion": "Tamil Nadu",
       "postalCode": "641602",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-    "latitude": 11.1085,
-"longitude": 77.3411
+      "latitude": 11.1085,
+      "longitude": 77.3411
     },
     "openingHours": "Mo-Sa 09:30-18:00",
-"openingHoursSpecification": {
-  "@type": "OpeningHoursSpecification",
-  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-  "opens": "09:30",
-  "closes": "18:00"
-}  "sameAs": [
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:30",
+      "closes": "18:00"
+    },
+    "sameAs": [
       "https://wa.me/919688879994"
     ],
     "areaServed": [
@@ -508,6 +509,92 @@
 
   </main>
 
+  <!-- ✅ Rate Us Section — placed INSIDE body, BEFORE footer -->
+  <!--
+    REVIEW SECTION
+    - 5 empty stars initially (CSS ☆ characters)
+    - Click to fill stars up to selected rating
+    - Rating 4–5 → opens Google review link in new tab after 1.5s
+    - Rating 1–3 → shows feedback textarea, no redirect
+    - Hover previews fill stars before clicking
+  -->
+  <section class="review-section" id="rate-us" aria-label="Rate your experience with Noor Travels">
+    <div class="container">
+      <div class="review-wrapper">
+
+        <!-- Icon -->
+        <div class="review-icon" aria-hidden="true">✈</div>
+
+        <!-- Heading -->
+        <p class="review-kicker">Share your experience</p>
+        <h2 class="review-heading">Your feedback helps us grow</h2>
+        <p class="review-subtext">
+          Loved our service? A quick rating takes 10 seconds and helps other travellers trust us too.
+        </p>
+
+        <!-- Star Rating -->
+        <!-- role="group" with aria-label makes it accessible -->
+        <div class="star-rating" id="star-rating" role="group" aria-label="Star rating">
+          <!-- Each button is a star. data-value holds the star number (1–5).    -->
+          <!-- aria-label describes what each star means for screen readers.      -->
+          <!-- The ☆ (hollow) and ★ (filled) characters are toggled via JS/CSS.  -->
+          <button class="star" data-value="1" aria-label="1 star — Poor" type="button">★</button>
+          <button class="star" data-value="2" aria-label="2 stars — Fair" type="button">★</button>
+          <button class="star" data-value="3" aria-label="3 stars — Good" type="button">★</button>
+          <button class="star" data-value="4" aria-label="4 stars — Very Good" type="button">★</button>
+          <button class="star" data-value="5" aria-label="5 stars — Excellent" type="button">★</button>
+        </div>
+
+        <!-- Rating label (e.g. "Very Good") shown after click -->
+        <p class="rating-label" id="rating-label" aria-live="polite"></p>
+
+        <!-- Message shown after rating is selected -->
+        <div class="rating-feedback" id="rating-feedback" aria-live="polite">
+
+          <!-- Shown for rating 4 or 5 -->
+          <div class="feedback-positive" id="feedback-positive">
+            <p class="feedback-text">
+              Wonderful! Redirecting you to Google Reviews…
+            </p>
+            <div class="feedback-progress-bar">
+              <div class="feedback-progress-fill" id="progress-fill"></div>
+            </div>
+            <a
+              class="button button-primary review-google-btn"
+              href="https://g.page/r/YOUR-LINK/review"
+              id="google-review-link"
+              target="_blank"
+              rel="noopener noreferrer">
+              Write a Google Review
+            </a>
+          </div>
+
+          <!-- Shown for rating 1, 2, or 3 -->
+          <div class="feedback-negative" id="feedback-negative">
+            <p class="feedback-text">
+              We're sorry to hear that. Please tell us how we can improve:
+            </p>
+            <textarea
+              class="feedback-textarea"
+              id="feedback-text-input"
+              placeholder="Your suggestion helps us serve you better..."
+              rows="3"
+              aria-label="Improvement suggestion"></textarea>
+            <button class="button button-primary" id="feedback-submit" type="button">
+              Submit Feedback
+            </button>
+            <p class="feedback-thankyou" id="feedback-thankyou" style="display:none;">
+              Thank you! We'll use your feedback to improve. 🙏
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Site Footer -->
   <footer class="site-footer" aria-label="Site footer">
     <div class="container footer-shell">
       <p>Noor Travels &amp; Manpower Service — Tiruppur, Tamil Nadu</p>
@@ -515,21 +602,6 @@
     </div>
   </footer>
 
-<section class="review-cta">
-  <h2>⭐ Your Feedback Matters!</h2>
-  <p>Rate your experience with Noor Travels</p>
-
-  <div class="star-rating">
-    <span data-value="1">☆</span>
-    <span data-value="2">☆</span>
-    <span data-value="3">☆</span>
-    <span data-value="4">☆</span>
-    <span data-value="5">☆</span>
-  </div>
-
-  <p id="rating-msg"></p>
-</section>
-  
   <!-- ✅ Deferred script for non-blocking page load -->
   <script src="script.js" defer></script>
 </body>
