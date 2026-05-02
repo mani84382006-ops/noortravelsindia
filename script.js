@@ -206,7 +206,7 @@ if ("IntersectionObserver" in window && revealItems.length) {
   );
 }, 1500);
 
-}, 1500);
+
 
 
 
