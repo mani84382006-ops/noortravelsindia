@@ -204,7 +204,7 @@ setTimeout(() => {
     "https://www.google.com/maps/place/?q=place_id:ChIJaxyfQNMHqTsRT-iT7iIs5o8Q",
     "_blank"
   );
-}, 1500);
+}, 1200);
 
 
 
