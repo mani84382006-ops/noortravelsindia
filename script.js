@@ -199,13 +199,12 @@ if ("IntersectionObserver" in window && revealItems.length) {
           progressFill.classList.add("running"); /* triggers CSS transition */
         });
  
-        setTimeout(() => {
+setTimeout(() => {
   window.open(
-    "https://search.google.com/local/writereview?placeid=ChIJaxyfQNMHqTsRT-iT7iIs5o8Q",
+    "https://www.google.com/maps/place/?q=place_id:ChIJaxyfQNMHqTsRT-iT7iIs5o8Q",
     "_blank"
   );
 }, 1500);
-
 
 
 
