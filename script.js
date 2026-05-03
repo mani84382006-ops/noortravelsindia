@@ -201,7 +201,7 @@ if ("IntersectionObserver" in window && revealItems.length) {
  
 setTimeout(() => {
   window.open(
-    "https://www.google.com/maps/place/?q=place_id:ChIJaxyfQNMHqTsRT-iT7iIs5o8Q",
+    "https://maps.app.goo.gl/eBdnf4JdkiduGpDM6",
     "_blank"
   );
 }, 1200);
